@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioSynt • Música que nasce da sua planta</title>
+  <style>
+    :root {
+      --green-dark: #0f3d2e;
+      --green-medium: #145a42;
+      --green-light: #1e7f5c;
+      --accent: #6fffb0;
+      --text-light: #e6fff4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background: linear-gradient(180deg, var(--green-dark), #081f17); color: var(--text-light); line-height: 1.6; }
+    
+    /* HERO section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 8%;
+      gap: 3rem;
+      background: radial-gradient(circle at top left, var(--green-medium), transparent 60%);
+    }
+    .hero-text { max-width: 550px; display: flex; flex-direction: column; gap: 1.5rem; }
+    .hero-text h1 { font-size: 3rem; line-height: 1.2; }
+    .hero-text h1 span { color: var(--accent); }
+    .hero-text p { font-size: 1.1rem; opacity: 0.9; }
+    
+    .btn-primary {
+      width: fit-content; padding: 0.9rem 2rem;
+      background: linear-gradient(135deg, var(--accent), #3ddc97);
+      color: #083023; border: none; border-radius: 30px;
+      font-size: 1rem; font-weight: 600; cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+
+    /* Player de Audio Customizado */
+    .audio-player {
+      margin-top: 20px;
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 15px;
+      border: 1px solid rgba(111, 255, 176, 0.3);
+    }
+    .audio-label { font-size: 0.8rem; color: var(--accent); margin-bottom: 5px; display: block; }
+    audio { width: 100%; height: 30px; filter: sepia(20%) saturate(70%) hue-rotate(100deg); }
+
+    .hero-visual { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; }
+    
+    /* Imagem do Produto */
+    .product-img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(111, 255, 176, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .product-img:hover { transform: scale(1.02); }
+
+    /* Features Grid */
+    .features { padding: 5rem 8%; display: flex; flex-direction: column; gap: 3rem; background: linear-gradient(180deg, #081f17, #04130d); }
+    .features h2 { font-size: 2.4rem; text-align: center; }
+    .features-grid { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .feature-card {
+      background: linear-gradient(160deg, #0e3b2b, #09271d);
+      border-radius: 18px; padding: 2rem; width: 280px;
+      display: flex; flex-direction: column; gap: 1rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35); transition: transform 0.2s ease;
+    }
+    .feature-card:hover { transform: translateY(-6px); }
+    .feature-card h3 { color: var(--accent); font-size: 1.3rem; }
+
+    /* Responsividade */
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; text-align: center; padding-top: 6rem; }
+      .hero-text { align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>BioSynt<br><span>Música que nasce da sua planta</span></h1>
+      <p>
+        O BioSynt é um vaso inteligente que traduz os sinais vitais da sua planta
+        em trilhas Lo-Fi relaxantes. Dê o play abaixo para ouvir a "Voz da Natureza".
+      </p>
+      
+      <div class="audio-player">
+        <span class="audio-label">🎧 Ouça a Demo: "River of Little Thoughts"</span>
+        <audio controls>
+            <source src="bio-sound.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+      </div>
+
+      <br>
+      <a href="#" class="btn-primary">Entrar na Lista de Espera</a>
+    </div>
+
+    <div class="hero-visual">
+      <img src="biosynt.jpg" alt="Vaso Inteligente BioSynt" class="product-img">
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Por que o BioSynt é diferente?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>🌿 Biofeedback Vivo</h3>
+        <p>Sensores captam umidade e luz, transformando dados biológicos em som em tempo real.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎧 Lo-Fi Generativo</h3>
+        <p>Cada planta cria uma trilha única. O que você ouviu acima foi gerado por uma Suculenta.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📱 Design Futurista</h3>
+        <p>Acabamento em alumínio escovado e iluminação RGB que respira com a planta.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
