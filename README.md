@@ -1,6 +1,6 @@
 # 🌿 BioSynt - A Revolução da Bio-Acústica
 
-![BioSynt Product](biosynt.jpg)
+![BioSynt Product](biosynt.webp)
 
 > **"Onde a natureza encontra a tecnologia para criar a sintonia perfeita."**
 
